@@ -19,12 +19,14 @@
              type="text"
              ng-model="lunchMenu"
              placeholder="list comma separated dishes you usually have for lunch"
-             class="form-control">
+             class="form-control"
+             ng-style="boxStyle">
+      <small>* An empty item is not considered as an item towards to the count</small>
     </div>
     <div class="form-group">
       <button class="btn btn-default" ng-click="checkLunch();">Check If Too Much</button>
     </div>
-    <div class="form-group message">
+    <div class="form-group message" ng-style="msgStyle">
       {{message}}
     </div>
   </div>

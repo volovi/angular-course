@@ -11,11 +11,19 @@ function LunchCheckController($scope) {
   $scope.message = "";
 
   $scope.checkLunch = function () {
-    $scope.message=checkLunchMenu($scope.lunchMenu);
+    $scope.message = checkLunchMenu($scope.lunchMenu);
+
+    if ($scope.message == "Please enter data first") {
+      $scope.msgStyle = {'color':'red'};
+      $scope.boxStyle = {'border-color':'red'};
+    } else {
+      $scope.msgStyle = {'color':'green'};
+      $scope.boxStyle = {'border-color':'green'};
+    };
   };
 
   function checkLunchMenu(lunchMenu) {
-    var l = lunchMenu.split(",").filter(Boolean).length;
+    var l = lunchMenu.split(",").map(Function.prototype.call, String.prototype.trim).filter(Boolean).length;
     return l > 0 ? l > 3 ? "Too much!" : "Enjoy!" : "Please enter data first";
   };
 }
