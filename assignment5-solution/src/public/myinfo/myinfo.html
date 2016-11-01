@@ -1,0 +1,13 @@
+<div class="container">
+  <fieldset ng-if="myinfoCtrl.user.email.length"><legend>My Favorite Dish</legend>
+    <menu-item menu-item="myinfoCtrl.user.favoriteDish"></menu-item>
+  </fieldset>
+  <fieldset ng-if="myinfoCtrl.user.email.length">
+  	<legend>Contact Info</legend>
+  	{{myinfoCtrl.user.firstname}} {{myinfoCtrl.user.lastname}}<br>
+    {{myinfoCtrl.user.email}}<br>
+    {{myinfoCtrl.user.phone}}
+  </fieldset>
+</div>
+<span ng-if="!myinfoCtrl.user.email.length">Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></span>
+ 
