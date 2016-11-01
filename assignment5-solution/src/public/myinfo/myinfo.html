@@ -8,6 +8,6 @@
     {{myinfoCtrl.user.email}}<br>
     {{myinfoCtrl.user.phone}}
   </fieldset>
+  <span ng-if="!myinfoCtrl.user.email.length">Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></span>
 </div>
-<span ng-if="!myinfoCtrl.user.email.length">Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></span>
  
