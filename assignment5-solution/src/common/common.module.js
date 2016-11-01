@@ -2,7 +2,7 @@
 "use strict";
 
 angular.module('common', [])
-.constant('ApiPath', 'http://res-srv-c5.herokuapp.com')
+.constant('ApiPath', 'https://res-srv-c5.herokuapp.com')
 .config(config);
 
 config.$inject = ['$httpProvider'];
